@@ -53,36 +53,63 @@
 //// CHALLENGE 1 REVISIT //////
 
 
-function describeSelf(name, birthYear, favouriteFood) {
-    return {
-      name,
-      birthYear,
-      favouriteFood,
+// function describeSelf(name, birthYear, favouriteFood) {
+//     return {
+//       name,
+//       birthYear,
+//       favouriteFood,
   
-      calcAge() {
-        console.log(this);
-        return 2023 - this.birthYear;
-      },
+//       calcAge() {
+//         console.log(this);
+//         return 2023 - this.birthYear;
+//       },
   
-      getSummary() {
-        return `${this.name} is ${this.birthYear} years old. Their favourite food is ${this.favouriteFood}`;
-      }
-    };
-  }
+//       getSummary() {
+//         return `${this.name} is ${this.birthYear} years old. Their favourite food is ${this.favouriteFood}`;
+//       }
+//     };
+//   }
   
-   const nameDave = describeSelf("Dave", 1991, "Steak");
-   const nameLina = describeSelf("Lina", 1993, "Tacos");
-   const nameAlec = describeSelf("Alec", 1985, "Falafel");
+//    const nameDave = describeSelf("Dave", 1991, "Steak");
+//    const nameLina = describeSelf("Lina", 1993, "Tacos");
+//    const nameAlec = describeSelf("Alec", 1985, "Falafel");
 
-   console.log(nameDave.getSummary());
-   console.log(nameLina.getSummary());
-   console.log(nameAlec.getSummary());
+//    console.log(nameDave.getSummary());
+//    console.log(nameLina.getSummary());
+//    console.log(nameAlec.getSummary());
+
+   ///// REVISIT 3 /// 
+
+//    function describeSelf(name, birthYear, favouriteFood) {
+//         return `My name is ${name}, ${birthYear}, ${favouriteFood},`;
+//    };
+
+//    const nameDave = describeSelf("Dave", 1991, "Steak");
+//    const nameLina = describeSelf("Lina", 1993, "Tacos");
+//    const nameAlec = describeSelf("Alec", 1985, "Falafel");
+
+//    console.log(nameDave);
+//    console.log(nameLina);
+//    console.log(nameAlec);
   
- 
-
-
 
 
 ///// CHALLENGE TWO - OBJECT AND ARRAYS //////
+
+  const meObject = {
+    firstName: "Dave",
+    lastName: "Church",
+    age: 23,
+    job: "Yoga Teacher",
+    pets: ["Robbo the dog", "Johnny the cat", "Louis the turtle"],
+
+    getSummary() {
+        return `My name is ${this.firstName} ${this.lastName} and I'm ${this.age} years old and have ${this.pets.length} pets`;
+
+    },
+
+  };
+
+  console.log(meObject.getSummary());
 
 
