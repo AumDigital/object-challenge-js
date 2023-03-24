@@ -96,20 +96,53 @@
 
 ///// CHALLENGE TWO - OBJECT AND ARRAYS //////
 
-  const meObject = {
-    firstName: "Dave",
-    lastName: "Church",
-    age: 23,
-    job: "Yoga Teacher",
-    pets: ["Robbo the dog", "Johnny the cat", "Louis the turtle"],
+  // const meObject = {
+  //   firstName: "Dave",
+  //   lastName: "Church",
+  //   age: 23,
+  //   job: "Yoga Teacher",
+  //   pets: ["Robbo the dog"], /* "Johnny the cat", "Louis the turtle"],*/
 
-    getSummary() {
-        return `My name is ${this.firstName} ${this.lastName} and I'm ${this.age} years old and have ${this.pets.length} pets`;
+  //   logSelf() {
+  //       const numPets = this.pets.length;
+  //       const petsText = numPets === 1 ? "pet" : "pets";
+  //       console.log(`My name is ${this.firstName} ${this.lastName} and I'm ${this.age} years old and have ${numPets} ${petsText}`);
 
-    },
+  //   },
 
-  };
+  // };
 
-  console.log(meObject.getSummary());
+  // meObject.logSelf();
+
+  ///// CHALLENGE TIP CALCULATOR /////
 
 
+  // function calculateTip(bill) {
+  //   const tipPercentage = bill >= 50 && bill <= 300 ? 0.1 : 0.15;
+  //   const tipAmount = bill * tipPercentage;
+  //   const totalAmount = bill + tipAmount;
+  //   return bill < 50 ? "No tip necessary" : `The total amount of the bill is ${bill}. The tip % is therefore ${tipPercentage * 100}% and the total amount to pay including tip is ${totalAmount}.`;
+  // }
+  
+  // console.log(calculateTip(265));
+  // console.log(calculateTip(80));
+  // console.log(calculateTip(560));
+  // console.log(calculateTip(30));
+  
+
+function calculateTip (bill) {
+  let tipPercentage;
+  if (bill >= 50 && bill <= 300) {
+    tipPercentage = 10;
+  } else {
+    tipPercentage = 15;
+  }
+  const tipAmount = bill * (tipPercentage / 100);
+  const totalAmount = bill + tipAmount;
+  return bill < 50 ? `No tip necessary` : `The total amount of the bill is ${bill}. The tip % is therefore ${tipPercentage} and the total amount to pay including tip is ${totalAmount}.`;
+}
+
+console.log(calculateTip(265));
+console.log(calculateTip(80)); 
+console.log(calculateTip(560));
+console.log(calculateTip(40));
